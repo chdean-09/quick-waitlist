@@ -2,12 +2,13 @@
 import React, { useTransition } from 'react';
 import Mail from '/public/mail.svg';
 import Image from 'next/image';
-import toast from 'react-hot-toast';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { useToast } from './ui/use-toast';
 
 const EmailForm = () => {
   const [isPending, startTransaction] = useTransition();
+  const { toast } = useToast();
 
   const handleSubmit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -28,10 +29,15 @@ const EmailForm = () => {
 
         if (res.ok) {
           target.reset();
-          toast.success('Thank you for subscribing 🎉');
+          toast({
+            title: 'Thank you for subscribing 🎉',
+          });
         } else {
           console.error('Error:', res.status, res.statusText);
-          toast.error('Something went wrong');
+          toast({
+            title: 'Uh oh! Something went wrong.',
+            description: 'There was a problem with your request.',
+          });
         }
       } catch (error) {
         console.error('Fetch error:', error);

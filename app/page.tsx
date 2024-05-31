@@ -16,7 +16,6 @@ import Linkedin from '/public/linkedin.svg';
 import Twitter from '/public/twitter.svg';
 import Speaker from '/public/speaker.svg';
 import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/navigation';
 import {
   Dialog,
   DialogContent,
