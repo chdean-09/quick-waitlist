@@ -37,6 +37,10 @@ export default function Home() {
     process.env.NEXT_PUBLIC_GITHUB || 'https://www.github.com/';
   const siteLogo = process.env.NEXT_PUBLIC_LOGO || Speaker;
 
+  const [firstWord, secondWord, ...restOfWords] = Title.split(' ');
+  const animatedTitle = [firstWord, secondWord].join(' ');
+  const restOfString = restOfWords.join(' ');
+
   return (
     <Card className="max-w-sm md:max-w-screen-lg w-full mx-auto relative border-[1.5px] py-8">
       <CardHeader>
@@ -46,7 +50,10 @@ export default function Home() {
           </div>
           <div className="text-center mb-4 lg:mb-6 space-y-4 lg:space-y-6">
             <CardTitle className="text-4xl md:text-[55px] font-semibold leading-none md:leading-tight text-primary">
-              {Title}
+              <span className="gradient-text text-transparent animate-gradient">
+                {animatedTitle}
+              </span>
+              <div>{restOfString}</div>
             </CardTitle>
             <CardDescription className="text-lg md:text-[26px] font-normal">
               {Subtitle}
