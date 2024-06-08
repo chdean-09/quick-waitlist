@@ -45,8 +45,8 @@ export default function Home() {
     <Card className="max-w-sm md:max-w-screen-lg w-full mx-auto relative border-[1.5px] py-8">
       <CardHeader>
         <div className="min-w-full">
-          <div className="w-20 md:w-28 h-20 md:h-28 relative mx-auto">
-            <Image src={siteLogo} alt="speaker" fill />
+          <div className="flex justify-center items-center w-auto h-20 md:h-28 relative">
+            <Image src={siteLogo} alt="white square silid" fill />
           </div>
           <div className="text-center mb-4 lg:mb-6 space-y-4 lg:space-y-6">
             <CardTitle className="text-4xl md:text-[55px] font-semibold leading-none md:leading-tight text-primary">
