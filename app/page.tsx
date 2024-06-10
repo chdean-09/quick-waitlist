@@ -42,7 +42,7 @@ export default function Home() {
   const restOfString = restOfWords.join(' ');
 
   return (
-    <Card className="max-w-sm md:max-w-screen-lg w-full mx-auto relative border-[1.5px] py-8">
+    <Card className="max-w-xs md:max-w-screen-lg w-full mx-auto relative border-[1.5px] py-8">
       <CardHeader>
         <div className="min-w-full">
           <div className="flex justify-center items-center h-20 md:h-28 relative scale-[35%]">
