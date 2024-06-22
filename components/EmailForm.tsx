@@ -47,7 +47,7 @@ const EmailForm = () => {
   return (
     <form
       onSubmit={(e) => handleSubmit(e)}
-      className="grid grid-cols-1 md:flex md:justify-center md:items-center gap-2"
+      className="grid grid-cols-1 sm:flex sm:justify-center sm:items-center gap-2"
     >
       <div className="relative">
         <label

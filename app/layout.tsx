@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <main className="flex justify-center items-center min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+        <main className="min-h-screen">
           <ThemeProvider attribute="class" defaultTheme="dark">
             {children}
           </ThemeProvider>
