@@ -17,11 +17,6 @@ export default function OurStory() {
           <p className="text-lg leading-8 text-gray-300">
             So we asked ourselves, what if we make a website? After a year of struggling with essential core features, identifying the problem, and defining use cases, we found out users need security, convenience, and preference.
           </p>
-          <br />
-          <p className="text-lg leading-8 text-gray-300">
-            Our solution: {' '}
-            <span className="font-bold">Silid Revolution.</span>
-          </p>
         </div>
       </div>
     </div>
