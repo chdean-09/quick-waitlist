@@ -12,7 +12,7 @@ export function SocialMedia() {
     process.env.NEXT_PUBLIC_GITHUB || 'https://www.github.com/';
 
   return (
-    <div className="flex justify-center items-center gap-2 mt-6 ">
+    <div className="flex justify-center items-center gap-2 mt-4">
       <Link href={LinkedinLink} className="relative w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]">
         <Image src={Linkedin} alt="Linkedin" fill />
       </Link>

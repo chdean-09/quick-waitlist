@@ -1,13 +1,13 @@
 export default function AboutUs() {
   return (
-    <section className="text-gray-400 bg-gray-900">
+    <section className="text-gray-400">
       <div className="container px-5 py-16 mx-auto">
-        <h1 className="sm:text-3xl text-2xl font-semibold title-font text-center text-white mb-12">About Us
+        <h1 className="sm:text-4xl text-3xl font-semibold title-font text-center text-white mb-12">About Us
         </h1>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
           <div className="p-4 md:w-1/2 flex">
             <div className="w-12 h-12 p-2 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
-              <svg fill="#946de8" viewBox="0 0 24 24">
+              <svg fill="#ffe000" viewBox="0 0 24 24">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -18,13 +18,13 @@ export default function AboutUs() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-white text-lg title-font font-medium mb-2">Mission</h2>
-              <p className="leading-relaxed text-base">Revolutionize the rental housing market by providing a seamless, secure, and personalized platform that links tenants with their ideal living spaces. We believe in enhancing the rental experience by streamlining searches, ensuring safety, and prioritizing user preferences. Through innovative technology and a commitment to excellence, we aim to transform the way people find their shelters, making the process safe, fast, and tailored to individual needs.</p>
+              <h2 className="text-white text-xl title-font font-semibold mb-2">Mission</h2>
+              <p className="text-base leading-7 text-gray-300">Revolutionize the rental housing market by providing a seamless, secure, and personalized platform that links tenants with their ideal living spaces. We believe in enhancing the rental experience by streamlining searches, ensuring safety, and prioritizing user preferences. Through innovative technology and a commitment to excellence, we aim to transform the way people find their shelters, making the process safe, fast, and tailored to individual needs.</p>
             </div>
           </div>
           <div className="p-4 md:w-1/2 flex">
             <div className="w-12 h-12 p-1 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
-              <svg fill="#946de8" height="200px" width="200px" version="1.1" id="Layer_1" viewBox="0 0 512 512">
+              <svg fill="#ffe000" height="200px" width="200px" version="1.1" id="Layer_1" viewBox="0 0 512 512">
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier">
@@ -40,8 +40,8 @@ export default function AboutUs() {
               </svg>
             </div>
             <div className="flex-grow pl-6">
-              <h2 className="text-white text-lg title-font font-medium mb-2">Vision</h2>
-              <p className="leading-relaxed text-base">Redefine the landscape of rental housing by creating a digital ecosystem that seamlessly connects tenants with their ideal space. We envision a nation where finding the perfect living space is effortless, personalized, and safe, transforming the traditional rental process into a pleasing and efficient experience. By leveraging the latest technology and a deep understanding of user needs, we aim to establish ourselves as the leading platform in the rental market, fostering a community of satisfied tenants and property owners alike.</p>
+              <h2 className="text-white text-xl title-font font-semibold mb-2">Vision</h2>
+              <p className="text-base leading-7 text-gray-300">Redefine the landscape of rental housing by creating a digital ecosystem that seamlessly connects tenants with their ideal space. We envision a nation where finding the perfect living space is effortless, personalized, and safe, transforming the traditional rental process into a pleasing and efficient experience. By leveraging the latest technology and a deep understanding of user needs, we aim to establish ourselves as the leading platform in the rental market, fostering a community of satisfied tenants and property owners alike.</p>
             </div>
           </div>
         </div>
