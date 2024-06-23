@@ -23,9 +23,6 @@ export default function OurStory() {
             <span className="font-bold">Silid Revolution.</span>
           </p>
         </div>
-        <div className="relative mt-16 h-80 lg:mt-8">
-          <Image src="/apartment.jpg" width="1824" height="1080" alt="Apartment" className="object-none object-bottom absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"/>
-        </div>
       </div>
     </div>
   )
