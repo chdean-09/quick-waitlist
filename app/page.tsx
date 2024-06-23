@@ -1,7 +1,3 @@
-'use client';
-
-import { useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import EmailForm from '@/components/EmailForm';
 import {
   Card,
@@ -22,17 +18,17 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative px-4 py-16 mx-auto h-screen w-full md:px-24 lg:px-8 lg:py-20 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+      <div className="relative px-4 py-32 mx-auto h-dvh min-h-[800px] sm:min-h-dvh w-full md:px-24 lg:px-8 sm:py-16 lg:py-20 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
         <div className="max-w-2xl mx-auto sm:max-w-xl md:max-w-2xl">
           <div className="text-center">
-            <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <div className="max-w-xl mb-20 md:mx-auto text-left sm:text-center lg:max-w-2xl sm:mb-12">
               <h2 className="max-w-lg mb-6 font-sans text-4xl sm:text-5xl font-bold leading-none tracking-tight md:mx-auto">
                 <span className="gradient-text text-transparent animate-gradient">
                   {animatedTitle}
                 </span>
                 <div>{restOfString}</div>
               </h2>
-              <p className="text-lg font-normal">
+              <p className="text-base md:text-lg font-light">
                 {Subtitle}
               </p>
             </div>
@@ -44,7 +40,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-4 py-16 mx-auto w-full md:px-24 lg:px-8 lg:py-20 bg-slate-300">
+      <div className="px-4 py-16 mx-auto w-full h-fit xl:h-dvh md:px-24 lg:px-8 lg:py-20 bg-slate-300">
         <div className="flex flex-col lg:flex-row">
           <div className="max-w-xl pr-16 mx-auto mb-10">
             <h5 className="mb-6 text-3xl font-extrabold leading-none text-black">Our Story</h5>
@@ -71,13 +67,13 @@ export default function Home() {
             <div className="max-w-md">
               <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-500 p-4">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                   <g id="SVGRepo_iconCarrier">
-                    <circle cx="10" cy="6" r="4" stroke="#FFFFFF" stroke-width="1.5"></circle>
-                    <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
-                    <path d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"></path>
+                    <circle cx="10" cy="6" r="4" stroke="#FFFFFF" strokeWidth="1.5"></circle>
+                    <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round"></path>
+                    <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round"></path>
+                    <path d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round"></path>
                   </g>
                 </svg>
               </div>
@@ -100,8 +96,8 @@ export default function Home() {
             <div className="max-w-md">
               <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-500 p-3">
                 <svg fill="#FFFFFF" viewBox="0 0 100 100">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                   <g id="SVGRepo_iconCarrier">
                     <g>
                       <g>
