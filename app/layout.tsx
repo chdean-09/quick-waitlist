@@ -26,19 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        enableSystem={false}
-        defaultTheme="light"
-      >
-        <body className={`${inter.className} pb-32`}>
+      <body className={`${inter.className}`}>
+        <ThemeProvider
+          attribute="class"
+          enableSystem={false}
+          defaultTheme="light"
+        >
           <SiteHeader />
           <main className="flex-1 overflow-hidden">{children}</main>
           <SiteFooter />
-        </body>
-        <Toaster />
-        <Analytics />
-      </ThemeProvider>
+          <Toaster />
+          <Analytics />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

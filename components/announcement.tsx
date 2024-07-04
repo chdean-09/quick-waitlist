@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ArrowRight, Rocket } from 'lucide-react';
 import { Separator } from './ui/separator';

@@ -1,5 +1,6 @@
-import Balance from 'react-wrap-balancer';
+'use client';
 
+import Balance from 'react-wrap-balancer';
 import { cn } from '@/lib/utils';
 
 function PageHero({

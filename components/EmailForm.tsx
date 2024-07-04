@@ -1,34 +1,48 @@
 'use client';
-import React, { useTransition } from 'react';
-import Mail from '/public/mail.svg';
-import Image from 'next/image';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { useToast } from './ui/use-toast';
 
-const EmailForm = () => {
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+
+import { Button } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { toast } from '@/components/ui/use-toast';
+import { useTransition } from 'react';
+import Loading from './loading';
+
+const FormSchema = z.object({
+  email: z.string().email({
+    message: 'Invalid email address.',
+  }),
+});
+
+export default function EmailForm() {
   const [isPending, startTransaction] = useTransition();
-  const { toast } = useToast();
 
-  const handleSubmit = async (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    const target = event.target as HTMLFormElement;
-    const form = new FormData(target);
-    const email = form.get('email');
-    if (!email) {
-      return null;
-    }
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      email: '',
+    },
+  });
 
+  function onSubmit(data: z.infer<typeof FormSchema>) {
     startTransaction(async () => {
       try {
         const res = await fetch('/api/resend', {
           method: 'POST',
-          body: JSON.stringify({ email }),
+          body: JSON.stringify(data),
           headers: { 'Content-Type': 'application/json' },
         });
 
         if (res.ok) {
-          target.reset();
           toast({
             title: 'Thank you for subscribing 🎉',
           });
@@ -43,34 +57,39 @@ const EmailForm = () => {
         console.error('Fetch error:', error);
       }
     });
-  };
+  }
+
   return (
-    <form
-      onSubmit={(e) => handleSubmit(e)}
-      className="grid grid-cols-1 md:flex md:justify-center md:items-center gap-2"
-    >
-      <div className="relative">
-        <label
-          htmlFor="email"
-          className="absolute inset-y-0 left-0 pl-2.5 flex items-center"
-        >
-          <Image src={Mail} alt="mail" />
-        </label>
-        <Input
-          type="email"
+    <Form {...form}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="flex flex-col md:flex-row gap-4"
+      >
+        <FormField
+          control={form.control}
           name="email"
-          id="email"
-          required
-          placeholder="Join our waiting list..."
-          className="lg:w-[300px] py-2 px-3 text-base pl-8"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input
+                  placeholder="Enter your email"
+                  {...field}
+                  className="h-12 w-full"
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-      </div>
-
-      <Button disabled={isPending} type="submit">
-        Subscribe
-      </Button>
-    </form>
+        <Button
+          disabled={isPending}
+          variant={'default'}
+          type="submit"
+          className="w-full h-12 md:w-fit"
+        >
+          {isPending ? <Loading /> : 'Subscribe'}
+        </Button>
+      </form>
+    </Form>
   );
-};
-
-export default EmailForm;
+}

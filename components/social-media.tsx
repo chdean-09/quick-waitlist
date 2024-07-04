@@ -1,3 +1,5 @@
+'use client';
+
 import { Linkedin } from '@/public/icons/linkedin';
 import { X } from '@/public/icons/x';
 import Link from 'next/link';

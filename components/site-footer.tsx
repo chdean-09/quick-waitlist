@@ -14,8 +14,8 @@ import { SocialMedia } from '@/components/social-media';
 
 export function SiteFooter() {
   return (
-    <div className="w-full container">
-      <p className="text-muted-foreground text-md text-center">
+    <div className="w-full container pb-16">
+      <div className="text-muted-foreground text-md text-center">
         we care about your data in our{' '}
         <Dialog>
           <DialogTrigger className="underline transition-all duration-200 hover:text-accent-foreground h-fit">
@@ -38,7 +38,7 @@ export function SiteFooter() {
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      </p>
+      </div>
       <SocialMedia />
     </div>
   );
