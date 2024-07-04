@@ -4,6 +4,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/next';
+import SiteHeader from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,15 +26,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <main className="flex justify-center items-center min-h-screen">
-          <ThemeProvider attribute="class" defaultTheme="dark">
-            {children}
-          </ThemeProvider>
-        </main>
+      <ThemeProvider
+        attribute="class"
+        enableSystem={false}
+        defaultTheme="light"
+      >
+        <body className={`${inter.className} pb-32`}>
+          <SiteHeader />
+          <main className="flex-1 overflow-hidden">{children}</main>
+          <SiteFooter />
+        </body>
         <Toaster />
         <Analytics />
-      </body>
+      </ThemeProvider>
     </html>
   );
 }

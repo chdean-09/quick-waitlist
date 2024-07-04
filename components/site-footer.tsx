@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -8,15 +10,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { SocialMedia } from '@/components/socialMedia';
+import { SocialMedia } from '@/components/social-media';
 
-export function Footer() {
+export function SiteFooter() {
   return (
-    <div className="min-w-full">
-      <p className="text-muted-foreground text-md text-center mt-2">
+    <div className="w-full container">
+      <p className="text-muted-foreground text-md text-center">
         we care about your data in our{' '}
         <Dialog>
-          <DialogTrigger className="underline transition-all duration-200 hover:text-white/90">
+          <DialogTrigger className="underline transition-all duration-200 hover:text-accent-foreground h-fit">
             privacy policy
           </DialogTrigger>
           <DialogContent className="flex flex-col items-center justify-center py-8">
