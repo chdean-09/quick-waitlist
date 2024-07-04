@@ -4,8 +4,9 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@vercel/analytics/next';
-import SiteHeader from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import dynamic from 'next/dynamic';
+import Loading from '@/components/loading';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,6 +19,10 @@ export const metadata: Metadata = {
   title: siteName,
   description: siteDescription,
 };
+
+const DynamicHeader = dynamic(() => import('@/components/site-header'), {
+  ssr: false,
+});
 
 export default function RootLayout({
   children,
@@ -32,7 +37,7 @@ export default function RootLayout({
           enableSystem={false}
           defaultTheme="light"
         >
-          <SiteHeader />
+          <DynamicHeader />
           <main className="flex-1 overflow-hidden">{children}</main>
           <SiteFooter />
           <Toaster />

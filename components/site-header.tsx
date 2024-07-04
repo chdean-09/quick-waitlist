@@ -3,7 +3,7 @@
 import { Logo } from '@/public/icons/logo';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
-import { Filter, Goal, Map, Menu, Package, Rocket } from 'lucide-react';
+import { Filter, Goal, Map, Menu, Package, Rocket, X } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -16,12 +16,9 @@ import { Button } from './ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from '@/components/ui/navigation-menu';
 
 export default function SiteHeader() {
@@ -79,8 +76,11 @@ export default function SiteHeader() {
 
         <ThemeModeToggle variant="ghost" className="hidden md:block" />
         <Popover modal>
-          <PopoverTrigger className="block md:hidden">
+          <PopoverTrigger className="block md:hidden data-[state=open]:hidden">
             <Menu />
+          </PopoverTrigger>
+          <PopoverTrigger className="hidden data-[state=open]:block">
+            <X />
           </PopoverTrigger>
           <PopoverContent
             className="w-screen h-screen rounded-none bg-background text-foreground border-none"
