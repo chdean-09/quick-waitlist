@@ -61,6 +61,7 @@ export default function SiteHeader() {
                       icon={Rocket}
                       title="About"
                       description="Learn about our company."
+                      route="/company/about"
                     />
                     <NavigationButtonMobile
                       icon={Goal}
@@ -152,27 +153,30 @@ interface NavigationButtonProps {
   icon: React.ElementType; // Accepts any React component as an icon
   title: string; // Main text
   description: string; // Subtext
+  route?: string; // Optional route to navigate to
 }
 
 const NavigationButtonMobile: React.FC<NavigationButtonProps> = ({
   ...props
 }) => {
   return (
-    <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
-      <div className="flex w-full gap-4 ">
-        <div className="p-2 border rounded-sm">
-          {/* Render the passed icon component */}
-          <props.icon className="text-muted-foreground" strokeWidth={1} />
+    <Link href={props.route ?? "/#"}>
+      <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
+        <div className="flex w-full gap-4 ">
+          <div className="p-2 border rounded-sm">
+            {/* Render the passed icon component */}
+            <props.icon className="text-muted-foreground" strokeWidth={1} />
+          </div>
+          <div>
+            <p className="font-medium text-secondary-foreground text-start">
+              {props.title}
+            </p>
+            <p className="font-normal text-muted-foreground text-start text-wrap">
+              {props.description}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="font-medium text-secondary-foreground text-start">
-            {props.title}
-          </p>
-          <p className="font-normal text-muted-foreground text-start text-wrap">
-            {props.description}
-          </p>
-        </div>
-      </div>
-    </Button>
+      </Button>
+    </Link>
   );
 };
