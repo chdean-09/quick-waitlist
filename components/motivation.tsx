@@ -5,15 +5,17 @@ export default function Motivation() {
       </h1>
 
       <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
-        We envision silid to revolutionize the traditional rental methods evolving it into a faster and more accessible to filipinos.
+        Silid.ph started as an idea in 2023. We were frustrated by how hard it was to find apartments or boarding houses near our school and work.
+
       </p>
 
       <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
-        The idea is backed by these factors were most people choose a place that matches with themselves and habit. Some consider the distance between work and school to reduce commute. We also saw an opportunity that the real estate market is projected to increase in the next 2-10 years based on the current overseas investments. Overall the journey in acquiring this data is fun and based on our years of involvement in business and freelancing.
+        As we started to dig deeper, it became clear that this was just the tip of the iceberg. We realized that finding a space that suits the renter was the biggest issue, so we improved our current ways.
+        In 2024 we announced a home rental platform and get the team to work.
       </p>
 
       <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
-        Silid aims to boost the rental market and aid employees and students to their success.
+        We are creating something cozy here, and we&apos;re excited to build it for you.
       </p>
     </div>
   )

@@ -4,6 +4,7 @@ import Mission from "@/components/mission"
 import Motivation from "@/components/motivation"
 import ValueProposition from "@/components/valueProposition"
 import Vision from "@/components/vision"
+import Analysis from "@/components/analysis"
 
 export default function AboutUs() {
   return (
@@ -23,6 +24,8 @@ export default function AboutUs() {
       <Motivation />
 
       <ValueProposition />
+
+      <Analysis />
 
       <Team />
 
