@@ -1,22 +1,28 @@
+import {
+  PageHero,
+  PageHeroDescription,
+  PageHeroHeading,
+} from '@/components/page-hero';
+
 export default function Motivation() {
   return (
-    <div className="container px-5 py-12 mx-auto text-center">
-      <h1 className="max-w-2xl mt-3 mb-10 text-3xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-4xl text-gray-800 dark:text-white flex flex-row items-center justify-center mx-auto">Our Story
-      </h1>
+    <PageHero className="container px-5 mx-auto text-center">
+      <PageHeroHeading className="max-w-2xl mb-10 text-3xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-4xl text-gray-800 dark:text-white flex flex-row items-center justify-center mx-auto">
+        Our Story
+      </PageHeroHeading>
 
-      <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
+      <PageHeroDescription className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
         Silid.ph started as an idea in 2023. We were frustrated by how hard it was to find apartments or boarding houses near our school and work.
+      </PageHeroDescription>
 
-      </p>
-
-      <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
+      <PageHeroDescription className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
         As we started to dig deeper, it became clear that this was just the tip of the iceberg. We realized that finding a space that suits the renter was the biggest issue, so we improved our current ways.
         In 2024 we announced a home rental platform and get the team to work.
-      </p>
+      </PageHeroDescription>
 
-      <p className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
+      <PageHeroDescription className="max-w-lg py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300 mx-auto">
         We are creating something cozy here, and we&apos;re excited to build it for you.
-      </p>
-    </div>
+      </PageHeroDescription>
+    </PageHero>
   )
 }
