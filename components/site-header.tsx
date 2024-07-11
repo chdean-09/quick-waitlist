@@ -160,6 +160,7 @@ export default function SiteHeader() {
               </AccordionItem> */}
             </Accordion>
             <NavigationButtonMobile
+              href={'/survey'}
               icon={CheckSquare}
               title="Survey"
               description="Make Silid Better."
@@ -176,27 +177,31 @@ interface NavigationButtonProps {
   icon: React.ElementType; // Accepts any React component as an icon
   title: string; // Main text
   description: string; // Subtext
+  href?: string | null; // Navigation URL
 }
 
 const NavigationButtonMobile: React.FC<NavigationButtonProps> = ({
+  href,
   ...props
 }) => {
   return (
-    <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
-      <div className="flex w-full gap-4 ">
-        <div className="p-2 border rounded-sm">
-          {/* Render the passed icon component */}
-          <props.icon className="text-muted-foreground" strokeWidth={1} />
+    <a href={href ? href : ' '} className="w-full">
+      <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
+        <div className="flex w-full gap-4 ">
+          <div className="p-2 border rounded-sm">
+            {/* Render the passed icon component */}
+            <props.icon className="text-muted-foreground" strokeWidth={1} />
+          </div>
+          <div>
+            <p className="font-medium text-secondary-foreground text-start">
+              {props.title}
+            </p>
+            <p className="font-normal text-muted-foreground text-start text-wrap">
+              {props.description}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="font-medium text-secondary-foreground text-start">
-            {props.title}
-          </p>
-          <p className="font-normal text-muted-foreground text-start text-wrap">
-            {props.description}
-          </p>
-        </div>
-      </div>
-    </Button>
+      </Button>
+    </a>
   );
 };
