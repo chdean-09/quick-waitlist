@@ -28,7 +28,7 @@ function PageHeroHeading({
   return (
     <h1
       className={cn(
-        'text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]',
+        'text-center text-5xl font-bold leading-tight tracking-tighter md:text-7xl lg:leading-[1.1]',
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ function PageActions({
   return (
     <div
       className={cn(
-        'flex w-full items-center justify-center space-x-4 py-4 md:pb-10',
+        'flex w-full items-center justify-center space-x-4',
         className
       )}
       {...props}
