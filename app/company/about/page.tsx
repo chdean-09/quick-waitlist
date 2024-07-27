@@ -10,24 +10,25 @@ import {
   PageHeroHeading,
 } from '@/components/page-hero';
 
+import Image from "next/image"
+
 export default function AboutUs() {
   return (
     <>
-      <PageHero className="mx-auto xl:px-0 flex w-full flex-col items-center justify-center text-center">
-        <PageHeroHeading className="max-w-2xl mt-3 text-4xl font-bold leading-snug tracking-tight lg:leading-tight lg:text-5xl text-gray-800  dark:text-white flex flex-row gap-4 items-center justify-center">
-          About Silid
+      <PageHero className="mx-auto xl:px-0 flex w-full flex-col items-center justify-center text-center gap-12 mb-10 lg:-mb-16">
+        <PageHeroHeading className="mt-3 text-3xl font-normal leading-snug tracking-tight lg:leading-tight lg:text-4xl w-[95%]">
+          We Revolutionize Rental Housing, suiting to individual needs.
         </PageHeroHeading>
 
-        <PageHeroDescription className="max-w-2xl py-4 text-lg leading-normal lg:text-xl xl:text-xl text-gray-500 dark:text-gray-300">
-          We Revolutionize Rental Housing, tailoring to individual needs.
-        </PageHeroDescription>
+        <div className="relative w-[95%] sm:w-[85%]">
+          <Image src={"/map.png"} alt="map" width={1000} height={1000} className="object-cover w-[82%] h-56 m-auto rounded-lg"/>
+          <Image src={"/lf-silid.png"} alt="lf-silid" width={200} height={200} className="absolute bottom-3 left"/>
+        </div>
       </PageHero>
 
       <Motivation />
 
       <Team />
-
-      <Vision />
     </>
   )
 }
