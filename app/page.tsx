@@ -32,7 +32,7 @@ export default function IndexPage() {
             In One Platform
           </PageHeroHeading>
           <PageHeroDescription>{Subtitle}</PageHeroDescription>
-          <PageActions>
+          <PageActions className="py-16 sm:pb-0">
             <EmailForm />
           </PageActions>
         </PageHero>

@@ -63,14 +63,14 @@ export default function EmailForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col md:flex-row gap-4"
+        className="flex flex-col md:flex-row md:flex-1 gap-4 items-end justify-center w-full max-w-xl"
       >
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem>
-              <FormControl>
+            <FormItem className="w-full">
+              <FormControl className="w-full">
                 <Input
                   placeholder="Enter your email"
                   {...field}

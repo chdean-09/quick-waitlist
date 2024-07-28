@@ -3,7 +3,17 @@
 import { Logo } from '@/public/icons/logo';
 import Link from 'next/link';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
-import { Filter, Goal, Map, Menu, Package, Rocket, X } from 'lucide-react';
+import {
+  Check,
+  CheckSquare,
+  Filter,
+  Goal,
+  Map,
+  Menu,
+  Package,
+  Rocket,
+  X,
+} from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +27,10 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import { useState } from 'react';
 
@@ -34,7 +46,7 @@ export default function SiteHeader() {
           </Link>
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList>
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <NavigationMenuTrigger>Product</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[400px] gap-3 p-4">
@@ -73,6 +85,13 @@ export default function SiteHeader() {
                     />
                   </div>
                 </NavigationMenuContent>
+              </NavigationMenuItem> */}
+              <NavigationMenuItem>
+                <Link href="/survey" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Survey
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -102,7 +121,7 @@ export default function SiteHeader() {
             {/* navigation */}
             <Accordion type="single" collapsible className="w-full">
               {/* Product */}
-              <AccordionItem value="Product">
+              {/* <AccordionItem value="Product">
                 <AccordionTrigger className="hover:no-underline px-4">
                   Product
                 </AccordionTrigger>
@@ -124,9 +143,9 @@ export default function SiteHeader() {
                     description="Product news and features."
                   />
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
               {/* company */}
-              <AccordionItem value="Company">
+              {/* <AccordionItem value="Company">
                 <AccordionTrigger className="hover:no-underline px-4">
                   Company
                 </AccordionTrigger>
@@ -143,8 +162,14 @@ export default function SiteHeader() {
                     description="Achievements, Future plans, and goals."
                   />
                 </AccordionContent>
-              </AccordionItem>
+              </AccordionItem> */}
             </Accordion>
+            <NavigationButtonMobile
+              href={'/survey'}
+              icon={CheckSquare}
+              title="Survey"
+              description="Make Silid Better."
+            />
           </PopoverContent>
         </Popover>
       </div>
@@ -157,14 +182,15 @@ interface NavigationButtonProps {
   icon: React.ElementType; // Accepts any React component as an icon
   title: string; // Main text
   description: string; // Subtext
-  route?: string; // Optional route to navigate
+  href?: string | null; // Navigation URL
 }
 
 const NavigationButtonMobile: React.FC<NavigationButtonProps> = ({
+  href,
   ...props
 }) => {
   return (
-    <Link href={props.route ?? "/#"}>
+    <a href={href ? href : ' '} className="w-full">
       <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
         <div className="flex w-full gap-4 ">
           <div className="p-2 border rounded-sm">
@@ -181,6 +207,6 @@ const NavigationButtonMobile: React.FC<NavigationButtonProps> = ({
           </div>
         </div>
       </Button>
-    </Link>
+    </a>
   );
 };
