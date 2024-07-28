@@ -1,12 +1,9 @@
 import Team from "@/components/team"
 import Motivation from "@/components/motivation"
 import ValueProposition from "@/components/valueProposition"
-import Vision from "@/components/vision"
-import Analysis from "@/components/analysis"
 
 import {
   PageHero,
-  PageHeroDescription,
   PageHeroHeading,
 } from '@/components/page-hero';
 
@@ -21,12 +18,14 @@ export default function AboutUs() {
         </PageHeroHeading>
 
         <div className="relative w-[95%] sm:w-[85%]">
-          <Image src={"/map.png"} alt="map" width={1000} height={1000} className="object-cover w-[82%] h-56 m-auto rounded-lg"/>
-          <Image src={"/lf-silid.png"} alt="lf-silid" width={200} height={200} className="absolute bottom-3 left"/>
+          <Image src={"/map.png"} alt="map" width={1000} height={1000} className="object-cover w-[82%] h-56 m-auto rounded-lg" />
+          <Image src={"/lf-silid.png"} alt="lf-silid" width={200} height={200} className="absolute bottom-3 left-0" />
         </div>
       </PageHero>
 
       <Motivation />
+
+      <ValueProposition />
 
       <Team />
     </>
