@@ -11,16 +11,22 @@ export default function Motivation() {
         OUR STORY
       </PageHeroHeading>
 
-      <PageHeroDescription className="lg:max-w-[85%] py-2 text-lg leading-snug lg:text-xl mx-auto font-normal">
-        Silid.ph started as an idea in 2023. We were frustrated by how hard it was to find apartments or boarding houses near our school and work.
-      </PageHeroDescription>
+      <PageHeroDescription className="py-2 text-lg leading-snug lg:text-xl font-normal">
+        <span>
+          Silid.ph started as an idea in 2023. We were frustrated by how hard it was to find apartments or boarding houses near our school and work.
+        </span>
 
-      <PageHeroDescription className="lg:max-w-[85%] py-2 text-lg leading-snug lg:text-xl mx-auto font-normal">
-        As we started to dig deeper, it became clear that this was just the tip of the iceberg. We realized that finding a space that suits the renter was the biggest issue, so we improved our current ways.
-      </PageHeroDescription>
+        <br /><br />
 
-      <PageHeroDescription className="lg:max-w-[85%] py-2 text-lg leading-snug lg:text-xl mx-auto font-normal">
-        In 2024 we announced a home rental platform and get the team to work. We are creating something cozy here, and we&apos;re excited to build it for you.
+        <span>
+          As we started to dig deeper, it became clear that this was just the tip of the iceberg. We realized that finding a space that suits the renter was the biggest issue, so we improved our current ways.
+        </span>
+
+        <br /><br />
+
+        <span>
+          In 2024 we announced a home rental platform and get the team to work. We are creating something cozy here, and we&apos;re excited to build it for you.
+        </span>
       </PageHeroDescription>
     </PageHero>
   )
