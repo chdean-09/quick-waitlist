@@ -32,8 +32,11 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import { useState } from 'react';
 
 export default function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex place-content-between h-14 max-w-screen-2xl items-center">
@@ -73,6 +76,7 @@ export default function SiteHeader() {
                       icon={Rocket}
                       title="About"
                       description="Learn about our company."
+                      route="/company/about"
                     />
                     <NavigationButtonMobile
                       icon={Goal}
@@ -94,7 +98,7 @@ export default function SiteHeader() {
         </div>
 
         <ThemeModeToggle variant="ghost" className="hidden md:block" />
-        <Popover modal>
+        <Popover modal open={isOpen} onOpenChange={() => setIsOpen(!isOpen)}>
           <PopoverTrigger className="block md:hidden data-[state=open]:hidden">
             <Menu />
           </PopoverTrigger>
@@ -145,11 +149,12 @@ export default function SiteHeader() {
                 <AccordionTrigger className="hover:no-underline px-4">
                   Company
                 </AccordionTrigger>
-                <AccordionContent className="flex flex-col gap-4">
+                <AccordionContent className="flex flex-col gap-4" onClick={() => setIsOpen(false)}>
                   <NavigationButtonMobile
                     icon={Rocket}
                     title="About"
                     description="Learn about our company."
+                    route="/company/about"
                   />
                   <NavigationButtonMobile
                     icon={Goal}
