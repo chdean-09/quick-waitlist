@@ -18,14 +18,14 @@ export default function RentalImage() {
         alt="phone1"
         height={500}
         width={500}
-        className="-ml-16 sm:ml-10 md:ml-0 lg:ml-12 md:absolute md:top-0"
+        className="-ml-16 sm:ml-10 md:ml-0 lg:ml-12 md:absolute md:top-3 md:-left-4"
       />
       <Image
         src={"/phone2.png"}
         alt="phone2"
         width={500}
         height={500}
-        className="-ml-16 md:ml-0 lg:ml-12 mt-60 hidden md:block"
+        className="-ml-16 md:-ml-4 lg:ml-12 mt-60 hidden md:block"
       />
     </motion.div>
   );

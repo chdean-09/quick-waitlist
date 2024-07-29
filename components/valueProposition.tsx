@@ -24,7 +24,7 @@ export default function ValueProposition() {
       <div className="flex flex-col md:flex-row-reverse w-screen md:max-h-60">
         <SaveSearchingImage />
 
-        <div className="-mt-[380px] min-[500px]:-mt-[420px] sm:-mt-[380px] md:-mt-14 basis-1/2">
+        <div className="-mt-[50px] min-[500px]:-mt-[60px] sm:mt-0 md:-mt-14 basis-1/2">
           <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl md:text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
             Save Searching Expenses by 80%
           </PageHeroHeading>

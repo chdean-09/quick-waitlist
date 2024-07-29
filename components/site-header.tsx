@@ -67,7 +67,7 @@ export default function SiteHeader() {
                     />
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Company</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -76,7 +76,7 @@ export default function SiteHeader() {
                       icon={Rocket}
                       title="About"
                       description="Learn about our company."
-                      route="/company/about"
+                      href="/company/about"
                     />
                     <NavigationButtonMobile
                       icon={Goal}
@@ -85,13 +85,8 @@ export default function SiteHeader() {
                     />
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem> */}
+              </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/company/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    About
-                  </NavigationMenuLink>
-                </Link>
                 <Link href="/survey" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Survey
@@ -150,7 +145,7 @@ export default function SiteHeader() {
                 </AccordionContent>
               </AccordionItem> */}
               {/* company */}
-              {/* <AccordionItem value="Company">
+              <AccordionItem value="Company">
                 <AccordionTrigger className="hover:no-underline px-4">
                   Company
                 </AccordionTrigger>
@@ -159,7 +154,7 @@ export default function SiteHeader() {
                     icon={Rocket}
                     title="About"
                     description="Learn about our company."
-                    route="/company/about"
+                    href="/company/about"
                   />
                   <NavigationButtonMobile
                     icon={Goal}
@@ -167,14 +162,8 @@ export default function SiteHeader() {
                     description="Achievements, Future plans, and goals."
                   />
                 </AccordionContent>
-              </AccordionItem> */}
+              </AccordionItem>
             </Accordion>
-            <NavigationButtonMobile
-              href={"/company/about"}
-              icon={Rocket}
-              title="About"
-              description="Learn more."
-            />
             <NavigationButtonMobile
               href={"/survey"}
               icon={CheckSquare}
