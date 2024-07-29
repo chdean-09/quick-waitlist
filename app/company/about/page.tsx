@@ -1,13 +1,11 @@
-import Team from "@/components/team"
-import Motivation from "@/components/motivation"
-import ValueProposition from "@/components/valueProposition"
+import Team from "@/components/team";
+import Motivation from "@/components/motivation";
+import ValueProposition from "@/components/valueProposition";
 
-import {
-  PageHero,
-  PageHeroHeading,
-} from '@/components/page-hero';
+import { PageHero, PageHeroHeading } from "@/components/page-hero";
 
-import Image from "next/image"
+import Image from "next/image";
+import MapImage from "@/components/mapImage";
 
 export default function AboutUs() {
   return (
@@ -17,17 +15,14 @@ export default function AboutUs() {
           We Revolutionize Rental Housing, suiting to individual needs.
         </PageHeroHeading>
 
-        <div className="relative w-[95%] sm:w-[85%]">
-          <Image src={"/map.png"} alt="map" width={1000} height={1000} className="object-cover w-[82%] h-56 m-auto rounded-lg" />
-          <Image src={"/lf-silid.png"} alt="lf-silid" width={200} height={200} className="absolute bottom-3 left-0" />
-        </div>
+        <MapImage />
       </PageHero>
 
       <Motivation />
 
       <ValueProposition />
 
-      <Team />
+    <Team />
     </>
-  )
+  );
 }
