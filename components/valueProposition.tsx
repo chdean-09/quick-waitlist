@@ -11,7 +11,7 @@ export default function ValueProposition() {
         </div>
 
         <div className="-mt-20 md:mt-20 basis-1/2">
-          <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
+          <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl md:text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
             Reduce Rental Searching Time by 98%
           </PageHeroHeading>
 
@@ -27,7 +27,7 @@ export default function ValueProposition() {
         </div>
 
         <div className="-mt-[420px] md:-mt-14 basis-1/2">
-          <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
+          <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl md:text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
             Save Searching Expenses by 80%
           </PageHeroHeading>
 

@@ -7,7 +7,7 @@ import {
 export default function Motivation() {
   return (
     <PageHero className="container px-5 mx-auto text-center">
-      <PageHeroHeading className="max-w-2xl mb-2 text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
+      <PageHeroHeading className="max-w-2xl mb-2 text-5xl md:text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
         OUR STORY
       </PageHeroHeading>
 
