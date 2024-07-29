@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function saveSearchingImage() {
   return (
     <motion.div
-      className="scale-125 xl:scale-150 relative w-screen h-fit basis-1/2"
+      className="scale-125 xl:scale-150 relative w-screen h-fit basis-1/2 pointer-events-none"
       initial={{ opacity: 0.1 }}
       whileInView={{ opacity: 1 }}
       transition={{ ease: "easeOut", duration: 0.8 }}

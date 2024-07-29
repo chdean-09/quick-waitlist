@@ -41,7 +41,7 @@ export default function Team() {
       <ul role="list" className="grid gap-x-6 gap-y-6 place-content-evenly md:grid-cols-2 md:gap-y-8 md:w-[85%] max-w-[850px]">
         {people.map((person) => (
           <li key={person.name} className="m-auto w-full md:w-[90%] max-w-96">
-            <div className="flex items-center gap-x-6 w-72 md:w-full justify-start">
+            <div className="flex items-center gap-x-6 w-72 md:w-full justify-start pointer-events-none">
               <Image className="h-20 w-20 md:h-28 md:w-28 rounded-md" height={160} width={160} src={person.imageUrl} alt="" />
               <div>
                 <h3 className="text-base md:text-lg font-semibold leading-7 tracking-tight">{person.name}</h3>

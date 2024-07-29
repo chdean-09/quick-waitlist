@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function MapImage({}: Props) {
   return (
-    <div className="relative w-[95%] sm:w-[85%]">
+    <div className="relative w-[95%] sm:w-[85%] pointer-events-none">
       <motion.div
         className="box"
         initial={{ opacity: 0 }}
