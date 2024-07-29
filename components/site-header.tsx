@@ -4,13 +4,9 @@ import { Logo } from "@/public/icons/logo";
 import Link from "next/link";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
-  Check,
   CheckSquare,
-  Filter,
   Goal,
-  Map,
   Menu,
-  Package,
   Rocket,
   X,
 } from "lucide-react";
