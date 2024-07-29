@@ -19,6 +19,7 @@ export default function saveSearchingImage() {
         height={500}
         width={500}
         className="-mr-16 sm:mr-10 mt-24 md:mr-0 md:-mt-56 lg:-mt-80 xl:-mt-48 lg:mr-12 float-right overflow-hidden"
+        priority
       />
     </motion.div>
   );

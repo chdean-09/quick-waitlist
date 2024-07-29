@@ -12,6 +12,7 @@ export default function SampleProduct() {
         width={1474}
         height={1474}
         className="scale-[175%] md:scale-95 w-full"
+        priority
       />
     </AspectRatio>
   );
