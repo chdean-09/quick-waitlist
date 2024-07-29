@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Logo } from '@/public/icons/logo';
-import Link from 'next/link';
-import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
+import { Logo } from "@/public/icons/logo";
+import Link from "next/link";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import {
   Check,
   CheckSquare,
@@ -13,16 +13,16 @@ import {
   Package,
   Rocket,
   X,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './ui/accordion';
-import { ThemeModeToggle } from './theme-mode-toggle';
-import { Separator } from './ui/separator';
-import { Button } from './ui/button';
+} from "./ui/accordion";
+import { ThemeModeToggle } from "./theme-mode-toggle";
+import { Separator } from "./ui/separator";
+import { Button } from "./ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -31,8 +31,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import { useState } from 'react';
+} from "@/components/ui/navigation-menu";
+import { useState } from "react";
 
 export default function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,6 +87,11 @@ export default function SiteHeader() {
                 </NavigationMenuContent>
               </NavigationMenuItem> */}
               <NavigationMenuItem>
+                <Link href="/company/about" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About
+                  </NavigationMenuLink>
+                </Link>
                 <Link href="/survey" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Survey
@@ -165,7 +170,13 @@ export default function SiteHeader() {
               </AccordionItem> */}
             </Accordion>
             <NavigationButtonMobile
-              href={'/survey'}
+              href={"/company/about"}
+              icon={Rocket}
+              title="About"
+              description="Learn more."
+            />
+            <NavigationButtonMobile
+              href={"/survey"}
               icon={CheckSquare}
               title="Survey"
               description="Make Silid Better."
@@ -190,7 +201,7 @@ const NavigationButtonMobile: React.FC<NavigationButtonProps> = ({
   ...props
 }) => {
   return (
-    <a href={href ? href : ' '} className="w-full">
+    <a href={href ? href : " "} className="w-full">
       <Button variant="ghost" className="w-full h-14 px-2 rounded-lg">
         <div className="flex w-full gap-4 ">
           <div className="p-2 border rounded-sm">
