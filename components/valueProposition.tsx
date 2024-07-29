@@ -26,7 +26,7 @@ export default function ValueProposition() {
           <Image src={"/screenshot.png"} alt="screenshot" height={500} width={500} className="-mr-16 sm:mr-10 mt-24 md:mr-3 md:-mt-56 lg:-mt-80 xl:-mt-48 lg:mr-12 float-right overflow-hidden" />
         </div>
 
-        <div className="-mt-[420px] md:-mt-14 basis-1/2">
+        <div className="-mt-[380px] min-[500px]:-mt-[420px] sm:-mt-[380px] md:-mt-14 basis-1/2">
           <PageHeroHeading className="max-w-2xl w-[80%] mb-2 text-4xl md:text-5xl font-bold leading-snug tracking-tight lg:leading-tight text-primary flex flex-row items-center justify-center mx-auto">
             Save Searching Expenses by 80%
           </PageHeroHeading>
